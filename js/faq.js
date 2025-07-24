@@ -1,0 +1,21 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const accordionItem = header.parentElement;
+            const accordionContent = header.nextElementSibling;
+            const icon = header.querySelector('i');
+
+            accordionItem.classList.toggle('active');
+
+            if (accordionItem.classList.contains('active')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                accordionContent.style.maxHeight = 0;
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+});
