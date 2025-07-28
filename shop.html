@@ -20,7 +20,10 @@
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
             <div class="nav-icons">
-                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="cart.html" class="cart-icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" style="display: none;">0</span>
+                </a>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -40,45 +43,45 @@
         </section>
 
         <section class="product-grid">
-            <div class="product-card" data-category="organic">
+            <div class="product-card" data-category="organic" data-id="1" data-name="Organic Brown Eggs" data-price="90.00">
                 <img src="assets/images/organic_brown.jpg" alt="Organic Eggs">
                 <h3>Organic Brown Eggs</h3>
-                <p class="price">R90.00 / dozen</p>
+                <p class="price">R90.00 <span>/ dozen</span></p>
                 <div class="quantity">
                     <label for="qty-1">Qty:</label>
                     <input type="number" id="qty-1" value="1" min="1">
                 </div>
-                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn add-to-cart" data-id="1" onclick="addToCart(this)">Add to Cart</button>
             </div>
-            <div class="product-card" data-category="free-range">
+            <div class="product-card" data-category="free-range" data-id="2" data-name="Free-Range White Eggs" data-price="100.00">
                 <img src="assets/images/free_range_w.jpg" alt="Free-Range Eggs">
                 <h3>Free-Range White Eggs</h3>
-                <p class="price">R100.00 / dozen</p>
+                <p class="price">R100.00 <span>/ dozen</span></p>
                 <div class="quantity">
                     <label for="qty-2">Qty:</label>
                     <input type="number" id="qty-2" value="1" min="1">
                 </div>
-                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn add-to-cart" data-id="2" onclick="addToCart(this)">Add to Cart</button>
             </div>
-            <div class="product-card" data-category="cage-free">
+            <div class="product-card" data-category="cage-free" data-id="3" data-name="Cage-Free Mixed Eggs" data-price="80.00">
                 <img src="assets/images/cage_free_mix.jpg" alt="Cage-Free Eggs">
                 <h3>Cage-Free Mixed Eggs</h3>
-                <p class="price">R80.00 / dozen</p>
+                <p class="price">R80.00 <span>/ dozen</span></p>
                 <div class="quantity">
                     <label for="qty-3">Qty:</label>
                     <input type="number" id="qty-3" value="1" min="1">
                 </div>
-                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn add-to-cart" data-id="3" onclick="addToCart(this)">Add to Cart</button>
             </div>
-             <div class="product-card" data-category="organic">
+             <div class="product-card" data-category="organic" data-id="4" data-name="Jumbo Organic Eggs" data-price="120.00">
                 <img src="assets/images/jumbo_organic.jpg" alt="Organic Eggs">
                 <h3>Jumbo Organic Eggs</h3>
-                <p class="price">R120.00 / dozen</p>
+                <p class="price">R120.00 <span>/ dozen</span></p>
                 <div class="quantity">
                     <label for="qty-4">Qty:</label>
                     <input type="number" id="qty-4" value="1" min="1">
                 </div>
-                <button class="btn add-to-cart">Add to Cart</button>
+                <button class="btn add-to-cart" data-id="4" onclick="addToCart(this)">Add to Cart</button>
             </div>
         </section>
     </main>
